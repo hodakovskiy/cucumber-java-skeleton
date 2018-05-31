@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'mvn test'
+        sh '/home/sergey/netbeans-8.2/java/maven/bin/mvn -Dtest=*Test test-compile surefire:test'
       }
       post {
         always {
